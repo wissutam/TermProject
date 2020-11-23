@@ -16,7 +16,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-//ส่วนของ admin ที่สามารถ delete และ update หนัง
+//ส่วนของ admin ที่สามารถ delete และ update ข้อมูลหนัง
 public class UpdateActivity extends AppCompatActivity {
 
     EditText name_input, type_input, runtime_input, plot_input;
@@ -68,7 +68,7 @@ public class UpdateActivity extends AppCompatActivity {
             ab.setTitle(name);
         }
 
-        //update ชื่อ ประเภท ความยาวและเรื่องย่อหนัง
+        //update ชื่อ ประเภท ความยาว และเรื่องย่อหนัง
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -146,8 +146,6 @@ public class UpdateActivity extends AppCompatActivity {
             if(type.equals("western")){
                 R_western2.setChecked(true);
             }
-
-
 
             Log.d("stev", name +" "+ type +" "+ runtime+" "+ plot);
         }else{

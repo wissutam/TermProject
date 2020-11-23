@@ -43,6 +43,7 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    //เพิ่มชื่อหนัง ประเภทหนัง ความยาวหนัง และเรื่องย่อหนังลง database
     void addMovie(String name, String type, int runtime, String plot){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -59,6 +60,7 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
+    //อ่านข้อมูลทั้งหมดใน database
     Cursor readAllData(){
         String query = "SELECT * FROM " + TABLE_NAME;
         SQLiteDatabase db = this.getReadableDatabase();
@@ -70,6 +72,7 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
+    //update ชื่อหนัง ประเภทหนัง ความยาวหนัง และเรื่องย่อหนัง
     void updateData(String row_id, String name, String type, String runtime, String plot){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -86,7 +89,7 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         }
 
     }
-
+    //delete หนัง
     void deleteOneRow(String row_id){
         SQLiteDatabase db = this.getWritableDatabase();
         long result = db.delete(TABLE_NAME, "_id=?", new String[]{row_id});
@@ -97,7 +100,7 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    void deleteAllData(){
+  /*  void deleteAllData(){
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("DELETE FROM " + TABLE_NAME);
     }
@@ -111,6 +114,6 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
             cursor = db.rawQuery(query, null);
         }
         return cursor;
-    }
+    } */
 
 }
