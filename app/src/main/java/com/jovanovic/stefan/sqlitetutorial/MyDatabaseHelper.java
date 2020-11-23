@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
 
-//ส่วนของฐานข้อมูล ประกอบด้วย column id, ชื่อหนัง, ประเภทหน้ง, ความยาวหนัง, เรื่องย่อหนัง
+//ส่วนของฐานข้อมูล ที่มีฐานข้อมูลชื่อว่า Movielist ชื่อตารางว่า my_movie ประกอบด้วย column id, ชื่อหนัง, ประเภทหน้ง, ความยาวหนัง, เรื่องย่อหนัง
 class MyDatabaseHelper extends SQLiteOpenHelper {
 
     private Context context;
@@ -89,7 +89,7 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         }
 
     }
-    //delete หนัง
+    //delete หนังออกจากฐานข้อมูล
     void deleteOneRow(String row_id){
         SQLiteDatabase db = this.getWritableDatabase();
         long result = db.delete(TABLE_NAME, "_id=?", new String[]{row_id});
@@ -100,20 +100,5 @@ class MyDatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-  /*  void deleteAllData(){
-        SQLiteDatabase db = this.getWritableDatabase();
-        db.execSQL("DELETE FROM " + TABLE_NAME);
-    }
-
-    Cursor readData(){
-        String query = "SELECT * FROM " + TABLE_NAME;
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        Cursor cursor = null;
-        if(db != null){
-            cursor = db.rawQuery(query, null);
-        }
-        return cursor;
-    } */
 
 }

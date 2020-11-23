@@ -53,7 +53,7 @@ public class AddActivity extends AppCompatActivity {
             }
         });
 
-        //เพิ่มข้อมูลลง database
+        //เรียกคำสั่ง addMovie จาก MyDatabaseHelper
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

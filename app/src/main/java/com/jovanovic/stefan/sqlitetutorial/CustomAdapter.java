@@ -21,7 +21,7 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
-//ส่วนของการส่งค่า
+//ส่วนของการแสดงค่า my_row ใน recyclerview
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
 
 

@@ -68,7 +68,7 @@ public class UpdateActivity extends AppCompatActivity {
             ab.setTitle(name);
         }
 
-        //update ชื่อ ประเภท ความยาว และเรื่องย่อหนัง
+        //เรียกคำสั่ง updateData จาก MyDatabaseHelper
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -86,7 +86,7 @@ public class UpdateActivity extends AppCompatActivity {
 
             }
         });
-        //delete หนัง
+        //
         delete_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -153,6 +153,7 @@ public class UpdateActivity extends AppCompatActivity {
         }
     }
 
+    //เรียกคำสั่ง deleteOneRow จาก MyDatabaseHelper เมื่อต้องการลบข้อมูลในฐานข้อมูล
     void confirmDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Delete " + name + " ?");

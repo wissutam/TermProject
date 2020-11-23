@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         empty_imageview = findViewById(R.id.empty_imageview);
         no_data = findViewById(R.id.no_data);
 
-        //ในส่วนของ user จะไม่แสดงปุ่ม add เพื่อไม่ให้ user เพิ่ม แก้ไข หรือลบข้อมูลภายใน list ได้
+        //ในส่วนของ user จะไม่แสดงปุ่ม add เพื่อไม่ให้ user เพิ่มข้อมูลภายใน list ได้
         if(P==2){
             add_button.hide();
         }
@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         movie_type = new ArrayList<>();
         movie_runtime = new ArrayList<>();
         movie_plot = new ArrayList<>();
+
 
         storeDataInArrays();
 

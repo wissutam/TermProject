@@ -16,7 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//ส่วนของการแสดงรายละเอียดหนังสำหรับให้ User อ่าน
+//ส่วนของการแสดงรายละเอียดหนังสำหรับให้ User อ่าน เฉพาะเรื่องที่ User เลือก
 public class ReadOnly extends AppCompatActivity {
 
     TextView name_input, type_input, runtime_input, plot_input;
