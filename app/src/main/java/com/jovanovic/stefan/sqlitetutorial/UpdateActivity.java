@@ -38,7 +38,7 @@ public class UpdateActivity extends AppCompatActivity {
         delete_button = findViewById(R.id.delete_button);
         back_button = findViewById(R.id.back_button);
         R_adventure2 = findViewById(R.id.radioButton_adventure2);
-        R_comedy2 = findViewById(R.id.radioButton_comedy);
+        R_comedy2 = findViewById(R.id.radioButton_comedy2);
         R_drama2 = findViewById(R.id.radioButton_drama2);
         R_erotica2 = findViewById(R.id.radioButton_erotica2);
         R_fantasy2 = findViewById(R.id.radioButton_fantasy2);
