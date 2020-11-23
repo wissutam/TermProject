@@ -11,7 +11,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-//ส่วนของการเพิ่มข้อมูลรายละเอียดหนัง
+//ส่วนของ admin ที่สามารถเพิ่มข้อมูลรายละเอียดของหนัง
 public class AddActivity extends AppCompatActivity {
 
     EditText name_input, type_input, runtime_input, plot_input;
@@ -41,7 +41,7 @@ public class AddActivity extends AppCompatActivity {
         R_sci_fi = findViewById(R.id.radioButton_sci_fi);
         R_western = findViewById(R.id.radioButton_western);*/
 
-        //แสดง toast ประเภทหนัง
+
         GM.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
@@ -67,11 +67,9 @@ public class AddActivity extends AppCompatActivity {
                 intent.putExtra("score",P);
                 startActivity(intent);
 
-
             }
         });
 
-        //ปุ่มกลับไปหน้า MainActivity
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

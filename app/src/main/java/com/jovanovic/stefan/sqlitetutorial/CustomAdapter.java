@@ -83,7 +83,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             holder.MV.setImageResource(R.drawable.western);
         }
 
-        //Recyclerview onClickListener
+
             if(N==2) {
                 holder.mainLayout.setOnClickListener(new View.OnClickListener() {
                     @Override

@@ -15,7 +15,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
-//ส่วนของการ Update ข้อมูล สำหรับ Admin
+
+//ส่วนของ admin ที่สามารถ delete และ update หนัง
 public class UpdateActivity extends AppCompatActivity {
 
     EditText name_input, type_input, runtime_input, plot_input;
@@ -67,6 +68,7 @@ public class UpdateActivity extends AppCompatActivity {
             ab.setTitle(name);
         }
 
+        //update ชื่อ ประเภท ความยาวและเรื่องย่อหนัง
         update_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,6 +86,7 @@ public class UpdateActivity extends AppCompatActivity {
 
             }
         });
+        //delete หนัง
         delete_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -106,7 +109,7 @@ public class UpdateActivity extends AppCompatActivity {
     void getAndSetIntentData(){
         if(getIntent().hasExtra("id") && getIntent().hasExtra("name") &&
                 getIntent().hasExtra("type") && getIntent().hasExtra("runtime")&& getIntent().hasExtra("plot")){
-            //Getting Data from Intent
+            //Getting ข้อมูลจาก Intent
             id = getIntent().getStringExtra("id");
             name = getIntent().getStringExtra("name");
             type = getIntent().getStringExtra("type");

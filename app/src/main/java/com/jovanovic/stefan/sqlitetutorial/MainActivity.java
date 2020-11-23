@@ -18,7 +18,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
-//ส่วนของการแสดง list หนัง
+//ส่วนของการแสดง list หนัง ที่ user สามารถอ่านรายละเอียดหนัง และ admin สามารถเพิ่มข้อมูล และแก้ไขข้อมูลหนังได้
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
@@ -44,16 +44,14 @@ public class MainActivity extends AppCompatActivity {
         empty_imageview = findViewById(R.id.empty_imageview);
         no_data = findViewById(R.id.no_data);
 
-        //เมื่อ P=2 ให้ซ่อนปุ่ม add ในส่วนของ user
         if(P==2){
             add_button.hide();
         }
-        //แสดงปุ่ม add ในส่วนของ admin
         else{
             add_button.show();
         }
-        back_button= findViewById(R.id.back_button);
 
+        back_button= findViewById(R.id.back_button);
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

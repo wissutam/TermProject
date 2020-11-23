@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+
 public class MainActivity2 extends AppCompatActivity {
 
     Button B_Admin,B_User;
@@ -19,7 +20,7 @@ public class MainActivity2 extends AppCompatActivity {
         B_User=findViewById(R.id.button_User);
         B_Admin=findViewById(R.id.button_Admin);
 
-        //กำหนดค่า P=2 แล้วส่งค่าไปหน้า MainActivity
+        //การทำงานส่วนของ User เป็นการทำงานส่วนหน้าบ้าน
         B_User.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,7 +31,7 @@ public class MainActivity2 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //กำหนดค่า P=99 แล้วส่งค่าไปหน้า MainActivity
+        //การทำงานส่วนของ Admin เป็นการทำงานส่วนหลังบ้าน
         B_Admin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

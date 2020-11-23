@@ -16,7 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//ส่วนของการแสดงรายละเอียดของหนัง สำหรับให้ผู้ใช้อ่าน
+//ส่วนของการแสดงรายละเอียดของหนัง สำหรับให้ User อ่าน
 public class ReadOnly extends AppCompatActivity {
 
     TextView name_input, type_input, runtime_input, plot_input;
@@ -57,7 +57,7 @@ public class ReadOnly extends AppCompatActivity {
     void getAndSetIntentData(){
         if(getIntent().hasExtra("id") && getIntent().hasExtra("name") &&
                 getIntent().hasExtra("type") && getIntent().hasExtra("runtime")&& getIntent().hasExtra("plot")){
-            //Getting Data from Intent
+            //Getting ข้อมูลจาก Intent
             id = getIntent().getStringExtra("id");
             name = getIntent().getStringExtra("name");
             type = getIntent().getStringExtra("type");
